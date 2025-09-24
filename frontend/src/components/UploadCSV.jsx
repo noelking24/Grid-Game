@@ -20,11 +20,7 @@ export default function UploadCSV({ onResult }) {
 
     try {
       setLoading(true);
-      const res = await fetch((import.meta.env.VITE_API_URL || 'http://localhost:5000') + '/api/game/upload', {
-        method: 'POST',
-        headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` },
-        body: form
-      });
+      const res = await apiFetch('/auth/signup', { method: 'POST', body: form });
       const data = await res.json();
       if (!res.ok) throw data;
       onResult(data.result);

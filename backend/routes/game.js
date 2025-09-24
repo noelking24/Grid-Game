@@ -32,9 +32,9 @@ function minPathSum(grid) {
 router.post('/upload', auth, upload.single('file'), async (req, res) => {
   try {
     if (!req.file) return res.status(400).json({ error: 'CSV file required' });
-    // const contents = req.file.buffer.toString('utf8');
-    const contents = fs.readFileSync(req.file.path, 'utf8');
-    fs.unlinkSync(req.file.path); // cleanup
+    const contents = req.file.buffer.toString('utf8');
+    // const contents = fs.readFileSync(req.file.path, 'utf8');
+    // fs.unlinkSync(req.file.path); // cleanup
 
     const { grid } = parseCsvToGrid(contents);
     const result = minPathSum(grid);

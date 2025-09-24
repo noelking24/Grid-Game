@@ -89,42 +89,44 @@ export default function Signup(){
     }
   }
   return (
-    <div className='flex justify-center m-3 mt-10 '>
-      <ToastContainer />
-      <form onSubmit={submit}
-      className='bg-white p-8 rounded-2xl shadow-lg flex flex-col gap-4 w-full max-w-sm'
-      >
-        <h2 className='text-2xl text-center font-bold mb-5'>Signup</h2>
-        <label >Name</label>
-        <input 
-        placeholder="Enter name" 
-        value={form.name} 
-        onChange={handleNameChange}
-        className='border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
-        />
-        <label >Email</label>
-        <input 
-        placeholder="Enter email" 
-        value={form.email} 
-        onChange={handleEmailChange}
-        className='border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
-        />
-        <label >Set Password</label>
-        <input 
-        type="password" 
-        placeholder="Set password" 
-        value={form.password} 
-        onChange={handlePasswordChange}
-        className='border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
-        />
-        <button type="submit"
-        className='bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition'
-        >Signup</button>
-        <div className='flex '>
-          <p>Already have an account? </p>
-          <a href="/login" className='text-blue-600 hover:underline ml-2'>Login</a>
-        </div>
-      </form>
+    <div className=' bg-gradient-to-b from-white via-blue-100 to-blue-200 min-h-screen '>
+      <div className='flex justify-center m-3 mt-10 '>
+        <ToastContainer />
+        <form onSubmit={submit}
+        className='bg-gray-100 p-8 rounded-2xl shadow-lg mb-20 flex flex-col gap-4 w-full max-w-sm'
+        >
+          <h2 className='text-2xl text-green-700 text-center font-bold mb-5'>Signup</h2>
+          <label >Name</label>
+          <input 
+          placeholder="Enter name" 
+          value={form.name} 
+          onChange={handleNameChange}
+          className='border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+          />
+          <label >Email</label>
+          <input 
+          placeholder="Enter email" 
+          value={form.email} 
+          onChange={handleEmailChange}
+          className='border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+          />
+          <label >Set Password</label>
+          <input 
+          type="password" 
+          placeholder="Set password" 
+          value={form.password} 
+          onChange={handlePasswordChange}
+          className='border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+          />
+          <button type="submit"
+          className='bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition'
+          >Signup</button>
+          <div className='flex '>
+            <p>Already have an account? </p>
+            <a href="/login" className='text-blue-600 hover:underline ml-2'>Login</a>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

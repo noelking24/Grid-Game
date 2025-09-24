@@ -25,12 +25,15 @@ export default function Login(){
   }
   return (
     <>
-    <div className=' bg-blue-300 min-h-screen py-3 '>
-        <h1 className='text-center mt-10 text-3xl font-bold text-red-500 border-2 bg-gray-200  '>Grid Game</h1>
-        <div className='flex justify-center m-3 mt-10  '>
+    <div className=' bg-gradient-to-b from-white via-blue-100 to-blue-200 min-h-screen '>
+      {/* #9cd3eaff */}
+        <div className='justify-center flex '>
+          <h1 className='text-center mt-10 text-3xl font-bold text-white  bg-red-500 rounded-lg px-[160px] py- '>Grid Game</h1>
+        </div>
+        <div className='flex justify-center m- mt-10  '>
           <form 
           onSubmit={submit}
-          className='bg-gray-200 p-8 rounded-2xl shadow-lg mb-20 flex flex-col gap-4 w-full max-w-sm'
+          className='bg-gray-100 p-8 rounded-2xl shadow-lg mb-20 flex flex-col gap-4 w-full max-w-sm'
           >
             <h2 className='text-2xl text-green-700 text-center font-bold mb-5'>Login</h2>
             <label >Email</label>
@@ -58,6 +61,7 @@ export default function Login(){
           </form>
           <ToastContainer />
         </div>
+        <h1 className='absolute right-0 mr-20 bottom-9 text-lg underline '><strong className='text-sm font-light '>by</strong> Noel David King </h1>
       </div>
     </>
   );

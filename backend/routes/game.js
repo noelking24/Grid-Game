@@ -5,7 +5,10 @@ const fs = require('fs');
 const auth = require('../middleware/auth');
 const parseCsvToGrid = require('../utils/parseCsvToGrid');
 
-const upload = multer({ dest: 'uploads/' });
+// const upload = multer({ dest: 'uploads/' });
+const upload = multer({ 
+  storage: multer.memoryStorage() // Use memory instead of disk
+});
 
 function minPathSum(grid) {
     const m = grid.length;
@@ -29,6 +32,7 @@ function minPathSum(grid) {
 router.post('/upload', auth, upload.single('file'), async (req, res) => {
   try {
     if (!req.file) return res.status(400).json({ error: 'CSV file required' });
+    // const contents = req.file.buffer.toString('utf8');
     const contents = fs.readFileSync(req.file.path, 'utf8');
     fs.unlinkSync(req.file.path); // cleanup
 

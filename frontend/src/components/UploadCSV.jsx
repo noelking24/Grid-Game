@@ -44,7 +44,7 @@ export default function UploadCSV({ onResult }) {
       type="file" accept=".csv,text/csv" onChange={(e)=>setFile(e.target.files[0])}/>
       <button
       className='bg-blue-400 p-2 rounded-lg hover:bg-blue-500 text-white border-2 border-blue-700 '
-      ype="submit" disabled={loading}>{loading ? 'Processing......' : 'Upload & Compute'}</button>
+      type="submit" disabled={loading}>{loading ? 'Processing......' : 'Upload & Compute'}</button>
     </form>
   );
 }

@@ -28,3 +28,29 @@ API:
 3. set `VITE_API_URL` to backend (local: http://localhost:5000)
 4. `npm run dev`
 
+### CSV File Format
+
+1. **First row:** grid dimensions → `rows,columns`  
+2. **Remaining rows:** grid values (non-negative integers)  
+
+---
+
+### Example 1: 3x3 Grid
+
+**File:** `grid-example.csv`
+
+```csv
+3,3
+1,3,1
+1,5,1
+4,2,1
+```
+```
+Minimum Value Path:
+[1] → [3] → [1]
+             ↓
+[1]   [5]   [1]
+             ↓
+[4]   [2]   [1]  End
+```
+Output: 1+3+1+1+1 = **7**

@@ -23,7 +23,7 @@ export default function UploadCSV({ onResult }) {
       const res = await apiFetch('/game/upload', { method: 'POST', body: form });
       // const data = await res.json();
       // if (!res.ok) throw data;
-      onResult(data.result);
+      onResult(res.result);
     } catch (err) {
       toast.error(err.error || 'Upload failed' , {
         position: "top-center",

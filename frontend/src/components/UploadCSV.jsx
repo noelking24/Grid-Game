@@ -20,7 +20,7 @@ export default function UploadCSV({ onResult }) {
 
     try {
       setLoading(true);
-      const res = await apiFetch('/auth/signup', { method: 'POST', body: form });
+      const res = await apiFetch('/game/upload', { method: 'POST', body: JSON.stringify(form) });
       const data = await res.json();
       if (!res.ok) throw data;
       onResult(data.result);

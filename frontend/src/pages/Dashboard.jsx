@@ -28,7 +28,7 @@ export default function Dashboard(){
 
   return (
     <div>
-      <h2 className='text-center items-center mt-9 text-3xl font-extrabold'>Dashboard</h2>
+      <h2 className='text-green-700 text-center items-center mt-9 text-3xl font-extrabold'>Grid Game Dashboard</h2>
       {/* <p
       className='absolute top-0 right-0 m-10 text-2xl font-bold '
       >Welcome {user?.name?.charAt(0).toUpperCase() + user?.name?.slice(1)} </p> */}

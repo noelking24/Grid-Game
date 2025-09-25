@@ -1,9 +1,7 @@
 function parseCsvToGrid(text) {
-  // Normalize line endings and trim empty lines
   const lines = text.split(/\r?\n/).map(l => l.trim()).filter(l => l.length > 0);
   if (lines.length < 2) throw new Error('CSV must contain at least dimensions row and one grid row');
 
-  // First row: "m,n"
   const dims = lines[0].split(',').map(s => s.trim());
   if (dims.length < 2) throw new Error('First row must have two integers: m,n');
 
